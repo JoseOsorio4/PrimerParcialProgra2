@@ -116,7 +116,7 @@ public class Videoclub {
 	public List<Pelicula> buscarPorTituloParcial(String texto) 
 	{ List<Pelicula> resultado = new ArrayList<>();
 	for (Pelicula pelicula : peliculas) 
-	{ if (pelicula.getTitulo().toLowerCase().contains(texto.equals())) 
+	{ if (pelicula.getTitulo().toLowerCase().contains(texto.toLowerCase())) 
 { resultado.add(pelicula); } } return resultado;}
 	// creo que esta correcta porque esta recorriendo la lista de peliculas y comparando el titulo que se busca
 	/**
