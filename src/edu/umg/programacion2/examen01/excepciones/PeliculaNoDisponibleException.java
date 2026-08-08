@@ -8,6 +8,8 @@ package edu.umg.programacion2.examen01.excepciones;
  */
 public class PeliculaNoDisponibleException extends Exception {
 
+	private static final long serialVersionUID = 1L;
+
 	public PeliculaNoDisponibleException(String mensaje) {
 		super(mensaje);
 	}

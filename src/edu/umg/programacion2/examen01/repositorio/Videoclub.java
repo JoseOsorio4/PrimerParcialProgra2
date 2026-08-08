@@ -185,8 +185,10 @@ public class Videoclub {
 	 *   retorna null).
 	 */
 	public Pelicula alquilarPrimeraDisponibleDeGenero(String genero) throws PeliculaNoDisponibleException {
-		// TODO (opcional): reemplazar esta línea por la lógica descrita arriba.
-		throw new UnsupportedOperationException(
-				"TODO opcional: completar alquilarPrimeraDisponibleDeGenero() en Videoclub");
-	}
-}
+	    for (Pelicula pelicula : peliculas) {
+	        if (pelicula.getGenero().equals(genero) && pelicula.estaDisponible()) {
+	            pelicula.alquilar();
+	            return pelicula;} }
+throw new PeliculaNoDisponibleException("no hay peliculas del genero: " + genero + " disponible");
+	}}
+// Busca la primera película disponible del género y la alquila
