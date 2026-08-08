@@ -89,10 +89,17 @@ public class Videoclub {
 	 * - Si el catálogo está vacío, retorna un Map vacío (no null).
 	 */
 	public Map<String, Integer> contarPeliculasPorGenero() {
-		// TODO: reemplazar esta línea por la lógica descrita arriba.
-		throw new UnsupportedOperationException("TODO: completar contarPeliculasPorGenero() en Videoclub");
-	}
+	    Map<String, Integer> conteo = new HashMap<>();
 
+	    for (Pelicula pelicula : peliculas) {
+	        String genero = pelicula.getGenero();
+	        int cantidad = conteo.getOrDefault(genero, 0);
+	        conteo.put(genero, cantidad + 1);
+	    }
+
+	    return conteo;
+	}
+// aca si estoy seguro porque contaria las peliculas agrupandolas por genero y retornando el genero
 	/**
 	 * PREGUNTA PRÁCTICA 2 (20 pts): completar buscarPorTituloParcial().
 	 * <p>
